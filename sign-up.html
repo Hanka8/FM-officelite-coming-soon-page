@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="css\signUp.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Officelite coming soon site</title>
+</head>
+
+<body class="all">
+  <main class="main">
+    <img class="main__logo" src="assets/shared/logo.svg" alt="officelite logo">
+    <div class="main__container">
+      <div class="main__container__col1">
+        <h1 class="h--1">Work smarter. Save time.</h1>
+        <p class="body--1">Easily manage your projects. Get on the list and receive in-app perks available only to
+          early subscribers. We are moving into final development and getting ready for official launch soon.</p>
+
+        <div class="main__container__col1__countdown">
+          <h4 class="h--3">coming <span id="comingDate" class="blue--text">4 nov 2020</span></h4>
+          <div class="main__container__col1__countdown__dates">
+            <div class="main__container__col1__countdown__dates__box">
+              <p id="days" class="box--number">47</p>
+              <p class="body--2">days</p>
+            </div>
+            <div class="main__container__col1__countdown__dates__box">
+              <p id="hours" class="box--number">07</p>
+              <p class="body--2">hours</p>
+            </div>
+            <div class="main__container__col1__countdown__dates__box">
+              <p id="minutes" class="box--number">56</p>
+              <p class="body--2">min</p>
+            </div>
+            <div class="main__container__col1__countdown__dates__box">
+              <p id="seconds" class="box--number">14</p>
+              <p class="body--2">sec</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form id="myForm" class="main__container__col2">
+        <div class="main__container__col2__col">
+          <label for="name" aria-label="enter your name"></label>
+          <input type="text" name="name" id="name" placeholder="Name">
+        </div>
+        <div class="main__container__col2__col">
+          <label for="e-mail" aria-label="enter your e-mail"></label>
+          <input type="text" class="" name="e-mail" id="e-mail" placeholder="Email Adress">
+          <span id="wrongIco" class="hide"></span>
+        </div>
+        <div class="main__container__col2__col readonly">
+          <label for="pack" id="packLabel">Basic Pack</label>
+          <input type="text" value="Free" name="pack" id="pack" readonly>
+          <button id="packBtn" type="button"></button>
+        </div>
+        <div class="main__container__col2__col">
+          <label for="phone-number" aria-label="phone number"></label>
+          <input type="text" name="phone-number" id="phone-number" placeholder="Phone Number">
+        </div>
+        <div class="main__container__col2__col">
+          <label for="company" aria-label="company"></label>
+          <input type="text" name="company" id="company" placeholder="Company">
+        </div>
+        <button class="btn btn--1" type="submit">Get on the list</button>
+        <menu id="menu" class="main__container__col2__menu">
+          <li class="main__container__col2__menu__option option">
+            <span class="option--name">Basic Pack</span> <span class="option--price">Free</span>
+            <span class="main__container__col2__menu__option__check check show--check"></span>
+          </li>
+          <li class="main__container__col2__menu__option option">
+            <span class="option--name">Pro Pack</span> <span class="option--price">$9.99</span>
+            <span class="main__container__col2__menu__option__check check"></span>
+          </li>
+          <li class="main__container__col2__menu__option option">
+            <span class="option--name">Ultimate Pack</span> <span class="option--price">$19.99</span>
+            <span class="main__container__col2__menu__option__check check"></span>
+          </li>
+        </menu>
+      </form>
+
+    </div>
+  </main>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>

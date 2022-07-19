@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="css\styles.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+  <title>Frontend Mentor | Officelite coming soon site</title>
+</head>
+<body class="all">
+  <main class="main">
+    <img class="main__logo" src="assets/shared/logo.svg" alt="officelite logo">
+    <div class="main__container">
+      <div class="main__container__col1">
+        <h1 class="h--1">A simple solution to complex tasks is coming soon</h1>
+        <p class="body--1">Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new 
+          collaboration platform built with an intuitive interface to improve productivity.</p>
+        <a class="btn btn--1" href="sign-up.html">Get Started</a>
+      </div>
+      <div class="main__container__col2">
+        <img src="assets/home/illustration-charts.svg" alt="">
+      </div>
+    </div>
+
+    <section class="cards">
+
+      <div class="cards__card white--card">
+        <h2 class="h--2">Basic</h2>
+        <h3 class="h--1">Free</h3>
+        <p class="body--2">Up to 5 users for free</p>
+        <div class="cards__card__text">
+          <p>Basic document collaboration</p>
+          <p>2 gb storage</p>
+          <p>Great security and support</p>
+        </div>
+        <a class="btn btn--2" href="sign-up.html">Try for Free</a>
+      </div>
+
+      <div class="cards__card blue--card">
+        <h2 class="h--2">Pro</h2>
+        <h3 class="h--1-number">$9.99</h3>
+        <p class="body--2">Per user, billed monthly</p>
+        <div class="cards__card__text">
+          <p>All essential integrations</p>
+          <p>50 gb storage</p>
+          <p>More control and insights</p>
+        </div>
+        <a class="btn btn--3" href="sign-up.html">Try for Free</a>
+      </div>
+
+      <div class="cards__card white--card">
+        <h2 class="h--2">Ultimate</h2>
+        <h3 class="h--1">$19.99</h3>
+        <p class="body--2">Per user, billed monthly</p>
+        <div class="cards__card__text">
+          <p>Robust work management</p>
+          <p>100 gb storage</p>
+          <p>VIP support</p>
+        </div>
+        <a class="btn btn--2" href="sign-up.html">Try for Free</a>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__col1">
+      <h4 class="h--3">coming <span id="comingDate" class="blue--text">4 nov 2020</span></h4>
+      <div class="footer__col1__dates">
+        <div class="footer__col1__dates__box">
+          <p id="days" class="box--number">47</p>
+          <p class="body--2">days</p>
+        </div>
+        <div class="footer__col1__dates__box">
+          <p id="hours" class="box--number">07</p>
+          <p class="body--2">hours</p>
+        </div>
+        <div class="footer__col1__dates__box">
+          <p id="minutes" class="box--number">56</p>
+          <p class="body--2">min</p>
+        </div>
+        <div class="footer__col1__dates__box">
+          <p id="seconds" class="box--number">14</p>
+          <p class="body--2">sec</p>
+        </div>
+      </div>
+    </div>
+    <a class="footer__col2 btn btn--1" href="sign-up.html">Get started</a>
+  </footer>
+
+
+  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
+  <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
+<script src="app.js"></script>
+</body>
+</html>

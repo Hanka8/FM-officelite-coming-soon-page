@@ -1,0 +1,195 @@
+//VARIABLES
+$background-color: #fafafa;
+$generic-blue: #5175FF;
+$light-blue: #829CFF;
+$dark-text: #25293A;
+$medium-text: #333950;
+$light-text: #747B95;
+$error-message: #F05B5B;
+$font-weights: (
+    "regular": 400,
+    "bold": 700
+);
+$font-sizes: (
+    "h--1": calc(56rem/16),
+    "h--2": calc(20rem/16),
+    "h--3": 1rem,
+    "body--1": calc(18rem/16),
+    "body--2": 1rem,
+    "btn": 1rem,
+    "h--1-tablet": calc(40rem/16),
+    "body--1-tablet": 1rem,
+    "h--1-number": calc(20rem/16),
+    "box--number": calc(56rem/16),
+    "box--number-mobile": calc(32rem/16),
+    "body--2-mobile": calc(12rem/16)
+);
+$line-heights: (
+    "h--1": calc(64rem/16),
+    "h--2": calc(28rem/16),
+    "h--3": calc(48rem/16),
+    "body--1": calc(28rem/16),
+    "body--2": calc(28rem/16),
+    "btn": calc(28rem/16),
+    "h--1-tablet": calc(48rem/16),
+    "body--1-tablet": calc(26rem/16),
+    "box--number": calc(48rem/16),
+    "box--number-mobile": calc(48rem/16)
+);
+$mobile: 600px;
+$tablet: 1200px;
+
+//FUNCTIONS
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+@function size($size-name) {
+    @return map-get($font-sizes, $size-name);
+}
+
+@function line($height-name) {
+    @return map-get($line-heights, $height-name);
+}
+
+//MIXINS
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin flexDirection($direction) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+//GENERAL STYLES
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.h--1 {
+    font-weight: weight(bold);
+    font-size: size(h--1);
+    line-height: line(h--1);
+    color: $dark-text;
+    @include tablet {
+        font-size: size(h--1-tablet);
+        line-height: line(h--1-tablet);
+    }
+}
+
+.h--1-number {
+    font-weight: weight(bold);
+    font-size: size(h--1);
+    line-height: line(h--1);
+    color: $dark-text;
+}
+
+.h--2 {
+    font-weight: weight(bold);
+    font-size: size(h--2);
+    line-height: line(h--2);
+    color: $dark-text;
+}
+
+.h--3 {
+    font-weight: weight(bold);
+    font-size: size(h--3);
+    line-height: line(h--3);
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 5px;
+}
+
+.body--1 {
+    font-weight: weight(regular);
+    font-size: size(body--1);
+    line-height: line(body--1);
+    color: $medium-text;
+    @include tablet {
+        font-size: size(body--1-tablet);
+        line-height: line(body--1-tablet);
+    }
+}
+
+.body--2 {
+    font-weight: weight(regular);
+    font-size: size(body--2);
+    line-height: line(body--2);
+    color: $medium-text;
+    @include mobile {
+        font-size: size(body--2-mobile);
+    }
+}
+
+.box--number {
+    color: white;
+    font-size: size(box--number);
+    line-height: line(box--number);
+    font-weight: weight(bold);
+    @include mobile {
+        font-size: size(box--number-mobile);
+        line-height: line(box--number-mobile);
+    }
+}
+
+.blue--text {
+    color: $generic-blue;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: size(btn);
+    line-height: line(btn);
+    width: calc(171rem/16);
+    height: calc(56rem/16);
+    border-radius: 28px;
+    cursor: pointer;
+    border: none;
+    transition: .2s;
+    text-decoration: none;
+}
+
+.btn--1 {
+    color: white;
+    background-color: $generic-blue;
+}
+
+.btn--1:hover {
+    background-color: $light-blue;
+}
+
+.btn--2 {
+    color: $generic-blue;
+    background-color: hsla(228°, 100%, 66%, 0.25);
+    mix-blend-mode: normal;
+}
+
+.btn--2:hover {
+    background-color: hsla(228°, 100%, 66%, 0.15);
+}
+
+.btn--3 {
+    background-color: white;
+    color: $generic-blue;
+}
+
+.btn--3:hover {
+    color: $light-blue;
+}
